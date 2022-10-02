@@ -1,0 +1,26 @@
+.git-hub,
+.express,
+.flask,
+.sqla,
+.markdown,
+.vs-code {
+	font-size: 3em;
+}
+
+#language-picture {
+	position: relative;
+	transition: top ease-in 4.5s;
+}
+
+#language-picture:hover {
+	top: -10px;
+}
+
+.info {
+	display: none;
+	font-size: medium;
+}
+
+img:hover + .info {
+	display: block;
+}
