@@ -1,3 +1,14 @@
-.text-warning:hover {
+.home-link:hover {
 	color: white !important;
+}
+
+.home-page-styles {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	background-color: #001d3d;
+	color: white;
+	font-size: calc(10px + 2vmin);
 }
