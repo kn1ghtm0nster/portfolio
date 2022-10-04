@@ -4,6 +4,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Education from "../components/Education";
 
 const AllRoutes = () => {
 	return (
@@ -14,6 +15,7 @@ const AllRoutes = () => {
 				<Route path="/contact" element={<Contact />}></Route>
 				<Route path="/skills" element={<Skills />}></Route>
 				<Route path="/projects" element={<Projects />}></Route>
+				<Route path="/education" element={<Education />}></Route>
 			</Routes>
 		</div>
 	);

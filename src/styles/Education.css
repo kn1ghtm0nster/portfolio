@@ -1,0 +1,22 @@
+.education-title {
+	font-size: 1.5rem;
+	font-weight: lighter;
+}
+
+.education-date {
+	font-size: 1.2rem;
+	font-weight: lighter;
+}
+
+.overview,
+.skills,
+.projects,
+.books {
+	font-size: 1.3rem;
+}
+
+.accordion-button:not(.collapsed) {
+	color: inherit;
+	background: #001d3d;
+	color: #ffc107;
+}

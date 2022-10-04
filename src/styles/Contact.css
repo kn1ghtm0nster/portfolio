@@ -1,4 +1,4 @@
-.bi-instagram {
+/* .bi-instagram {
 	background: radial-gradient(
 		circle at 30% 107%,
 		#fdf497 0%,
@@ -10,11 +10,8 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-/* .contact-styles {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
 } */
+
+.icon:hover {
+	color: #ffc107 !important;
+}
