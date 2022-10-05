@@ -82,46 +82,10 @@ const Projects = () => {
 		<div className="my-5">
 			<h1 className="text-center display-2 text-warning">Projects</h1>
 
-			{/* Poke-forum */}
-			<section className="mt-3">
-				<div className="mx-3">
-					<hr className="text-warning" />
-					<h2 className="text-white display-6">Poke-Forum</h2>
-					<hr className="text-warning" />
-				</div>
-				<div className="mx-3">
-					<ul>
-						{pokeForum.map((item) => (
-							<li className="list-item" key={item}>
-								{item}
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className="mx-3">
-					<a
-						href="https://poke-forum.herokuapp.com/"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
-					</a>
-					<a
-						href="https://github.com/kn1ghtm0nster/Poke-Forum"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						GitHub <i class="bi bi-github"></i>
-					</a>
-					<hr className="text-warning" />
-				</div>
-			</section>
-
 			{/* Jobly */}
 			<section className="mt-3">
 				<div className="mx-3">
+					<hr className="text-warning" />
 					<h2 className="text-white display-6">Jobly</h2>
 					<hr className="text-warning" />
 				</div>
@@ -167,16 +131,16 @@ const Projects = () => {
 				</div>
 			</section>
 
-			{/* Giphy-Party */}
+			{/* Poke-forum */}
 			<section className="mt-3">
 				<div className="mx-3">
-					<h2 className="text-white display-6">Giphy-Party</h2>
+					<h2 className="text-white display-6">Poke-Forum</h2>
 					<hr className="text-warning" />
 				</div>
 				<div className="mx-3">
 					<ul>
-						{giphyParty.map((item) => (
-							<li key={item} className="list-item">
+						{pokeForum.map((item) => (
+							<li className="list-item" key={item}>
 								{item}
 							</li>
 						))}
@@ -184,7 +148,7 @@ const Projects = () => {
 				</div>
 				<div className="mx-3">
 					<a
-						href="https://kn1ghtm0nster.github.io/giphy-app/"
+						href="https://poke-forum.herokuapp.com/"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -192,35 +156,7 @@ const Projects = () => {
 						Visit App <i class="bi bi-box-arrow-up-right"></i>
 					</a>
 					<a
-						href="https://github.com/kn1ghtm0nster/giphy-app"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						GitHub <i class="bi bi-github"></i>
-					</a>
-					<hr className="text-warning" />
-				</div>
-			</section>
-
-			{/* HTML-Parser */}
-			<section className="mt-3">
-				<div className="mx-3">
-					<h2 className="text-white display-6">HTML-Parser</h2>
-					<hr className="text-warning" />
-				</div>
-				<div className="mx-3">
-					<ul>
-						{htmlParser.map((item) => (
-							<li key={item} className="list-item">
-								{item}
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className="mx-3">
-					<a
-						href="https://github.com/kn1ghtm0nster/html-parser"
+						href="https://github.com/kn1ghtm0nster/Poke-Forum"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -259,6 +195,34 @@ const Projects = () => {
 				</div>
 			</section>
 
+			{/* HTML-Parser */}
+			<section className="mt-3">
+				<div className="mx-3">
+					<h2 className="text-white display-6">HTML-Parser</h2>
+					<hr className="text-warning" />
+				</div>
+				<div className="mx-3">
+					<ul>
+						{htmlParser.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className="mx-3">
+					<a
+						href="https://github.com/kn1ghtm0nster/html-parser"
+						className="text-warning text-decoration-none mx-3"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						GitHub <i class="bi bi-github"></i>
+					</a>
+					<hr className="text-warning" />
+				</div>
+			</section>
+
 			{/* Currency-Converter */}
 			<section className="mt-3">
 				<div className="mx-3">
@@ -277,6 +241,42 @@ const Projects = () => {
 				<div className="mx-3">
 					<a
 						href="https://github.com/kn1ghtm0nster/currency-converter/"
+						className="text-warning text-decoration-none mx-3"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						GitHub <i class="bi bi-github"></i>
+					</a>
+					<hr className="text-warning" />
+				</div>
+			</section>
+
+			{/* Giphy-Party */}
+			<section className="mt-3">
+				<div className="mx-3">
+					<h2 className="text-white display-6">Giphy-Party</h2>
+					<hr className="text-warning" />
+				</div>
+				<div className="mx-3">
+					<ul>
+						{giphyParty.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className="mx-3">
+					<a
+						href="https://kn1ghtm0nster.github.io/giphy-app/"
+						className="text-warning text-decoration-none mx-3"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Visit App <i class="bi bi-box-arrow-up-right"></i>
+					</a>
+					<a
+						href="https://github.com/kn1ghtm0nster/giphy-app"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
