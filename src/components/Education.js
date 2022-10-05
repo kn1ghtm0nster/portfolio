@@ -133,24 +133,6 @@ const Education = () => {
 								</ListGroup>
 							</AccordionBody>
 						</AccordionItem>
-						<AccordionItem>
-							<AccordionHeader targetId="3">
-								Projects
-							</AccordionHeader>
-							<AccordionBody accordionId="3" className="projects">
-								<ListGroup flush>
-									<ListGroupItem key={"Poke-Forum"}>
-										Poke-Forum
-									</ListGroupItem>
-									<ListGroupItem key={"Connect-4"}>
-										Connect-4
-									</ListGroupItem>
-									<ListGroupItem key={"Giphy Party"}>
-										Giphy Party
-									</ListGroupItem>
-								</ListGroup>
-							</AccordionBody>
-						</AccordionItem>
 					</Accordion>
 				</div>
 			</section>
@@ -289,7 +271,7 @@ const Education = () => {
 };
 
 // TODO: Add home link button at top of page. See the comment right above the main header.
-// TODO: change the backgrond of the accordion so it matches the backgrond.
+// TODO: change the background of the accordion so it matches the backgrond.
 // TODO: add animations.
 
 export default Education;
