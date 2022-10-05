@@ -1,9 +1,6 @@
 import "../styles/Projects.css";
-// import { useState } from "react";
 
 const Projects = () => {
-	// const [open, setOpen] = useState("");
-
 	const pokeForum = [
 		"Full-Stack Applciation built using Python and Flask to build the backend and communicate with relational database using PostgreSQL",
 		"Set up relational database with PostgreSQL in order to setup custom Python classes and make backend queries from user input on the frontend of application",
@@ -29,6 +26,56 @@ const Projects = () => {
 		"Corrected bug with application feature where applications were not being tracked unless a user logged out and logged back in. Made changes to the overall response object from the backend queries and the local storage object to keep track of the user's application array and update whenever the state changes",
 		"Deployed backend Express code to Heroku in order to take advantage of compatibility with PostreSQL databases along with free hosting for applications",
 		"Deployed frontend React code to Surge in order to display the frontend UI on a free publicly available hosting service and once site was deployed with Surge, I was able to view website without issues or errors from backend server which was being hosted on the Heroku platform",
+	];
+
+	const giphyParty = [
+		"Axios library was used via CDN in HTML template due to project being built during earlier portion of boot camp curriculum.",
+		"Implemented use of Axios library to make external API calls to Giphy API in order to gain better understanding making asynchronous requests and allow users to view page while waiting on a response from API.",
+		"Made use of asynchronous functions in order for users to view page without having to wait for the initial response from API therefore providing a friendly interface.",
+		"Created logic for Javascript to use the search input and make request to API main Giphy search endpoint without reloading the page in order to add the response gif to the web page. This feature involved using the event object and preventing the default behavior for form submissions.",
+		"Made use of DOM manipulation to create new elements from the search input results and display each result gif on page along with the ability to remove all images from the page providing the user with the ability to prevent page clutter.",
+		"Implemented styling with Bootstrap 5 in order to gain more experience with the newer syntax and use new syntax to add support for different screen sizes.",
+		"HTML index file was built with empty section in order to prevent hard coding all responses and make use of DOM object to add each response dynamically.",
+		"Deployed project with GitHub pages service as this service provides excellent support for basic static pages.",
+	];
+
+	const htmlParser = [
+		"Created Node.js script to generate a base text file with HTML code from valid websites and made use of Node's process and argv objects in order to read the terminal input from users.",
+		"Implemented logic to only generate text files for valid websites in order to prevent users from seeing an error file when parsing all website inputs.",
+		"Solved bug that was capturing invalid websites by ensuring the response object contained a valid domain property and if not, enabled logic to continue looping therefore ignoring the invalid websites.",
+		"Made use of Axios library via NPM install to make external requests to websites user passed in to text files.",
+		"With use of Axios, implemented use asynchronous function to make external requests to all websites url file contains.",
+		"Implemented logic in error handling function to display websites that were invalid based on response from Axios calls as to provide feedback to the user via the terminal once all files have been created.",
+		"Deployed source code to GitHub repository as project is meant to be used as a terminal tool and does not use a frontend visual or backend database.",
+	];
+
+	const jAPI = [
+		"Made use of Express.js to implement RESTful API routes in order to access mock data from backend relational database tables.",
+		"Used PostgreSQL to create class model Javascript files to prevent Express routes from handling query logic along with route logic which keeps in line with good practices in regards to separating route and query logic.",
+		"Implemented authentication and authorization methods through the use of Bcrypt library via NPM to ensure user information is stored in database securely and setup middleware routes to ensure proper authorization for specific routes.",
+		"Implemented JSON Web Token library to ensure user submissions for authentication cannot be intercepted and tampered as information received will be checked for validity in middleware functions that use authentication.",
+		"Enabled search feature for companies route to accept a search query which will be used with model files to create a custom query in the backend database and results returned to the user accordingly therefore adding a more user friendly experience with the API.",
+		"Updated tests after implementing search feature in order to ensure maximum test coverage and ensuring the tests still pass based on changes made to code base.",
+		"Implemented middlware function to check for a user's admin status via their returned JSON Web Token in order to access specific admin routes and set up custom error to be returned if a user is not an admin to provide user with feedback.",
+		"Corrected bug that was previously preventing admin users from accessing admin routes due to admin property not being set correctly upon logging in which and creating separate middlware function was the solution that I implemented.",
+		"Added new middlware function to check for admin type or authenticated user in order to access specific user features or company features such as deleting, updating, or creating a new user or company which checks the admin property set on the JSON Web Token.",
+		"Created additional tests for changes to company and user routes in order to ensure functions are responding with correct message based on whether or not a user is authenticated or has the correct authorization.",
+		"Implemented feature and route for users to apply to open job IDs which would transfer information to backend table that keeps track of user applications and would additionally update the user's current applications array.",
+		"Added check on model files to ensure no duplicate application requests are made from the API and set specific error messages to be sent to user as feedback if the user has previously applied to the same job.",
+		"Deployed APi logic to GitHub as this portion of the overall project was just the first part and main Jobly application would be using a similar pre-built backend API with a React frontend.",
+	];
+
+	const currencyConverter = [
+		"Created static website using Python and Flask to build the route framework and display correct HTML files.",
+		"Implemented Jinja-2 templates to serve the correct HTML file once a successful conversion is made after user submits their amount and desired currency.",
+		"Made use of the forex-python library to make external API calls to convert from one currency to another.",
+		"Implemented routes for project with the use of Flask as project was mainly created with Python.",
+		"Enabled conversion feature and setup logic on main application file to route user to correct route once the conversion response has been received from API.",
+		"Enabled form validation with the uses of Bootstrap 5 to display error messages if a user enters invalid information or tries to submit conversion form without the current and new currencies to provide user with feedback making the application user friendly.",
+		"Corrected app breaking bug which was due to some currency values not being available to convert through external API. Bug was resolved by importing the correct error class from the library and wrapping the conversion route with a try/except block to ensure form is not submitted and user gets an alert message instead.",
+		"Added conversion and used response from API to display the correct currency symbol which prevented having to create an object with all possible currency symbols.",
+		"Tested application with Python's unit test library which helped ensure that all routes were displaying correct information with successful conversions and all error messages were being displayed for their corresponding errors.",
+		"Deployed applicaiton code to GitHub repository and left README file with instructions for users to download and use application on their local machine to prevent issues with constant API calls being made from live website and possible blacklisting.",
 	];
 
 	return (
@@ -127,11 +174,17 @@ const Projects = () => {
 					<hr className="text-warning" />
 				</div>
 				<div className="mx-3">
-					<ul></ul>
+					<ul>
+						{giphyParty.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 				<div className="mx-3">
-					{/* <a
-						href="https://poke-forum.herokuapp.com/"
+					<a
+						href="https://kn1ghtm0nster.github.io/giphy-app/"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -139,13 +192,13 @@ const Projects = () => {
 						Visit App <i class="bi bi-box-arrow-up-right"></i>
 					</a>
 					<a
-						href="https://github.com/kn1ghtm0nster/Poke-Forum"
+						href="https://github.com/kn1ghtm0nster/giphy-app"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						GitHub <i class="bi bi-github"></i>
-					</a> */}
+					</a>
 					<hr className="text-warning" />
 				</div>
 			</section>
@@ -157,25 +210,23 @@ const Projects = () => {
 					<hr className="text-warning" />
 				</div>
 				<div className="mx-3">
-					<ul></ul>
+					<ul>
+						{htmlParser.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 				<div className="mx-3">
-					{/* <a
-						href="https://poke-forum.herokuapp.com/"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
-					</a>
 					<a
-						href="https://github.com/kn1ghtm0nster/Poke-Forum"
+						href="https://github.com/kn1ghtm0nster/html-parser"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						GitHub <i class="bi bi-github"></i>
-					</a> */}
+					</a>
 					<hr className="text-warning" />
 				</div>
 			</section>
@@ -187,25 +238,23 @@ const Projects = () => {
 					<hr className="text-warning" />
 				</div>
 				<div className="mx-3">
-					<ul></ul>
+					<ul>
+						{jAPI.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 				<div className="mx-3">
-					{/* <a
-						href="https://poke-forum.herokuapp.com/"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
-					</a>
 					<a
-						href="https://github.com/kn1ghtm0nster/Poke-Forum"
+						href="https://github.com/kn1ghtm0nster/jobly-api"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						GitHub <i class="bi bi-github"></i>
-					</a> */}
+					</a>
 					<hr className="text-warning" />
 				</div>
 			</section>
@@ -217,25 +266,23 @@ const Projects = () => {
 					<hr className="text-warning" />
 				</div>
 				<div className="mx-3">
-					<ul></ul>
+					<ul>
+						{currencyConverter.map((item) => (
+							<li key={item} className="list-item">
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 				<div className="mx-3">
-					{/* <a
-						href="https://poke-forum.herokuapp.com/"
-						className="text-warning text-decoration-none mx-3"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
-					</a>
 					<a
-						href="https://github.com/kn1ghtm0nster/Poke-Forum"
+						href="https://github.com/kn1ghtm0nster/currency-converter/"
 						className="text-warning text-decoration-none mx-3"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						GitHub <i class="bi bi-github"></i>
-					</a> */}
+					</a>
 					<hr className="text-warning" />
 				</div>
 			</section>
@@ -243,6 +290,6 @@ const Projects = () => {
 	);
 };
 
-// TODO: Add remaining projects: Giphy-Party, HTML-Parser, Jobly-API, Currency-Converter
+// TODO: Add css to display each project as a user scrolls down.
 
 export default Projects;
