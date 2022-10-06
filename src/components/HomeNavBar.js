@@ -1,53 +1,54 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import { Link } from "react-router-dom";
+import { Nav, NavItem } from "reactstrap";
 
 const HomeNavBar = () => {
 	return (
 		<div>
-			<hr className="text-warning my-2 animate__animated animate__fadeIn animate__delay-5s"></hr>
+			<hr className="text-warning my-2 animate__animated animate__fadeIn animate__faster animate__delay-5s"></hr>
 			<Nav justified>
-				<NavItem>
-					<NavLink
-						href="/about"
-						className="text-warning home-link animate__animated animate__fadeIn animate animate__delay-1s"
+				<NavItem className="my-1">
+					<Link
+						to="/about"
+						className="fs-3 text-warning text-decoration-none home-link animate__animated animate__fadeIn animate__faster animate__delay-1s"
 					>
 						About
-					</NavLink>
+					</Link>
 				</NavItem>
-				<NavItem>
-					<NavLink
-						href="/contact"
-						className="text-warning home-link animate__animated animate__fadeIn animate__delay-2s"
+				<NavItem className="my-1">
+					<Link
+						to="/contact"
+						className="fs-3 text-warning text-decoration-none home-link animate__animated animate__fadeIn animate__faster animate__delay-2s"
 					>
 						Contact
-					</NavLink>
+					</Link>
 				</NavItem>
-				<NavItem>
-					<NavLink
-						href="/skills"
-						className="text-warning home-link animate__animated animate__fadeIn animate__delay-3s"
+				<NavItem className="my-1">
+					<Link
+						to="/skills"
+						className="fs-3 text-warning text-decoration-none home-link animate__animated animate__fadeIn animate__faster animate__delay-3s"
 					>
 						Skills
-					</NavLink>
+					</Link>
 				</NavItem>
-				<NavItem>
-					<NavLink
-						href="/projects"
-						className="text-warning home-link animate__animated animate__fadeIn animate__delay-4s"
+				<NavItem className="my-1">
+					<Link
+						to="/projects"
+						className="fs-3 text-warning text-decoration-none home-link animate__animated animate__fadeIn animate__faster animate__delay-4s"
 					>
 						Projects
-					</NavLink>
+					</Link>
 				</NavItem>
-				<NavItem>
-					<NavLink
-						href="/education"
-						className="text-warning home-link animate__animated animate__fadeIn animate__delay-5s"
+				<NavItem className="my-1">
+					<Link
+						to="/education"
+						className="fs-3 text-warning text-decoration-none home-link animate__animated animate__fadeIn animate__faster animate__delay-5s"
 					>
 						Education
-					</NavLink>
+					</Link>
 				</NavItem>
 			</Nav>
-			<hr className="text-warning my-2 animate__animated animate__fadeIn animate__delay-5s"></hr>
+			<hr className="text-warning my-2 animate__animated animate__fadeIn animate__faster animate__delay-5s"></hr>
 		</div>
 	);
 };

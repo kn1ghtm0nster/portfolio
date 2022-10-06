@@ -80,7 +80,9 @@ const Projects = () => {
 
 	return (
 		<div className="my-5">
-			<h1 className="text-center display-2 text-warning">Projects</h1>
+			<h1 className="text-center display-2 text-warning" id="top">
+				Projects
+			</h1>
 
 			{/* Jobly */}
 			<section className="mt-3">
@@ -107,7 +109,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
+						Visit App <i className="bi bi-box-arrow-up-right"></i>
 					</a>
 
 					<a
@@ -116,7 +118,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Frontend <i class="bi bi-github"></i>
+						Frontend <i className="bi bi-github"></i>
 					</a>
 
 					<a
@@ -125,7 +127,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Backend <i class="bi bi-github"></i>
+						Backend <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>
@@ -153,7 +155,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
+						Visit App <i className="bi bi-box-arrow-up-right"></i>
 					</a>
 					<a
 						href="https://github.com/kn1ghtm0nster/Poke-Forum"
@@ -161,7 +163,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						GitHub <i class="bi bi-github"></i>
+						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>
@@ -189,7 +191,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						GitHub <i class="bi bi-github"></i>
+						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>
@@ -217,7 +219,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						GitHub <i class="bi bi-github"></i>
+						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>
@@ -245,7 +247,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						GitHub <i class="bi bi-github"></i>
+						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>
@@ -273,7 +275,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Visit App <i class="bi bi-box-arrow-up-right"></i>
+						Visit App <i className="bi bi-box-arrow-up-right"></i>
 					</a>
 					<a
 						href="https://github.com/kn1ghtm0nster/giphy-app"
@@ -281,7 +283,7 @@ const Projects = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						GitHub <i class="bi bi-github"></i>
+						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
 				</div>

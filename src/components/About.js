@@ -3,10 +3,25 @@ import { Link } from "react-router-dom";
 import "../styles/About.css";
 
 const About = () => {
+	// https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/
+	const handleDownload = () => {
+		fetch("Update-Beta_5.pdf").then((response) => {
+			response.blob().then((blob) => {
+				const url = window.URL.createObjectURL(blob);
+
+				let anchorLink = document.createElement("a");
+
+				anchorLink.href = url;
+				anchorLink.download = "Update-Beta_5.pdf";
+				anchorLink.click();
+			});
+		});
+	};
+
 	return (
 		<div>
 			<div>
-				<h1 className="text-white display-1 my-5 text-center">
+				<h1 className="text-white display-1 mt-5 text-center">
 					About Me
 				</h1>
 			</div>
@@ -287,10 +302,21 @@ const About = () => {
 						been writing this for about two hours now listening to
 						the same song so I am ready to end this long note) and
 						will include the social medial links where you can reach
-						out to me directly. <b>ALSO</b> also, it will contain my
-						current Resume! Ok that's all I got, Thanks for reading
-						friends :)
+						out or just follow to see what else I am up to. You can
+						download my resume from the button below if you are a
+						recruiter or something along those lines. Ok that's all
+						I got, Thanks for reading friends :)
 					</p>
+
+					<button
+						className="btn btn-warning download-btn"
+						onClick={handleDownload}
+					>
+						Download CV
+					</button>
+					<Link to="/" className="btn btn-warning mx-1">
+						Home <i className="bi bi-house"></i>
+					</Link>
 				</section>
 			</div>
 		</div>
