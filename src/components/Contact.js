@@ -12,8 +12,17 @@ import {
 	Container,
 	Button,
 } from "reactstrap";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
+	const [state, handleSubmit] = useForm("xzbwpejg");
+
+	if (state.succeeded) {
+		for (const form of document.getElementsByTagName("form")) {
+			form.reset();
+		}
+	}
+
 	return (
 		<div className="d-flex justify-content-center align-items-center vh-100">
 			<div>
@@ -60,7 +69,7 @@ const Contact = () => {
 					className="animate__animated animate__fadeIn animate__faster animate__delay-5s"
 				>
 					<h3 className="text-center display-6">Email Me!</h3>
-					<Form>
+					<Form onSubmit={handleSubmit}>
 						<FormGroup>
 							<Label htmlFor="subject" className="text-warning">
 								Subject
@@ -69,7 +78,13 @@ const Contact = () => {
 								id="subject"
 								name="subject"
 								placeholder="Email Subject"
+								type="text"
 								required
+							/>
+							<ValidationError
+								field="subject"
+								prefix="Subject"
+								errors={state.errors}
 							/>
 						</FormGroup>
 						<FormGroup>
@@ -77,10 +92,16 @@ const Contact = () => {
 								Email
 							</Label>
 							<Input
+								type="email"
 								id="email"
 								name="email"
 								placeholder="your-email@example.com"
 								required
+							/>
+							<ValidationError
+								field="email"
+								prefix="Email"
+								errors={state.errors}
 							/>
 						</FormGroup>
 						<FormGroup>
@@ -95,8 +116,13 @@ const Contact = () => {
 								placeholder="Type message..."
 								required
 							/>
+							<ValidationError
+								field="message"
+								prefix="Message"
+								errors={state.errors}
+							/>
 						</FormGroup>
-						<Button color="warning">
+						<Button color="warning" disabled={state.submitting}>
 							Send <i className="bi bi-send"></i>
 						</Button>
 					</Form>

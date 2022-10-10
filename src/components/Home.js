@@ -1,18 +1,36 @@
 import "../styles/Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
+import headshot from "../images/portfolio_headshot.jpg";
 import HomeNavBar from "../components/HomeNavBar";
 
 const Home = () => {
 	return (
-		<div className="home-page-styles">
-			<h1 className="display-1 mb-3 animate__animated animate__fadeIn animate__slower animate__delay-5s">
-				Diego <span className="main-font-color">Quintanilla</span>
-			</h1>
-			<h3 className="display-4 mb-3 animate__animated animate__fadeIn animate__slower animate__delay-5s">
-				<span className="main-font-color">Software</span> Engineer
-			</h3>
-			<HomeNavBar />
+		<div className="d-flex align-items-center justify-content-center vh-100 ">
+			<div className="row mx-auto">
+				<div className="col-md-6">
+					<div>
+						<h1 className="text-center display-1 mb-3 animate__animated animate__fadeIn animate__slower animate__delay-5s">
+							Diego{" "}
+							<span className="main-font-color">Quintanilla</span>
+						</h1>
+					</div>
+					<div>
+						<h3 className="text-center display-4 mb-3 animate__animated animate__fadeIn animate__slower animate__delay-5s">
+							<span className="main-font-color">Software</span>{" "}
+							Engineer
+						</h3>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<img
+						src={headshot}
+						className="img-thumbnail mx-auto d-block mt-4 d-none d-sm-block animate__animated animate__fadeIn animate__slower animate__delay-5s"
+						alt="diego-headshot"
+					/>
+				</div>
+				<HomeNavBar />
+			</div>
 		</div>
 	);
 };
