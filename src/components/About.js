@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import "animate.css";
 import "../styles/About.css";
+import { motion } from "framer-motion";
 
 const About = () => {
 	// https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/
@@ -21,21 +23,23 @@ const About = () => {
 	return (
 		<div>
 			<div>
-				<h1 className="text-white display-1 mt-5 text-center">
+				<h1 className="text-white display-1 mt-5 text-center" id="top">
 					About Me
 				</h1>
 			</div>
-			<div className="align-items-start">
-				<section>
-					<h3 className="text-warning display-4">The Story So Far</h3>
+			<div className="vh-100">
+				<motion.section className="section-1">
+					<h3 className="text-warning display-4 animate__animated animate__fadeIn animate__slow">
+						The Story So Far
+					</h3>
 
-					<p className="text-white my-3">
+					<p className="text-white my-3 animate__animated animate__fadeIn animate__slower animate__delay-2s">
 						Saturday, May 13<sup>th</sup>, 1995...
 					</p>
 
-					<p className="text-white my-3">
+					<p className="text-white my-3 animate__animated animate__fadeIn animate__delay-4s">
 						KIDDING!{" "}
-						<span>
+						<span className="animate__animated animate__fadeIn animate__fast animate__delay-5s">
 							Boy, wouldn't that have been a long "About" section
 							to read? Yeah I agree, would have been TOTALLY crazy
 							and wouldn't make much sense either so we are going
@@ -46,7 +50,7 @@ const About = () => {
 						</span>
 					</p>
 
-					<p className="text-white my-3">
+					<p className="text-white my-3 animate__animated animate__fadeIn animate__fast animate__delay-5s">
 						As you've probably already seen, my name is{" "}
 						<span className="text-warning">Diego</span> and I am a
 						Software Engineer currently enrolled in Springboard's
@@ -62,9 +66,12 @@ const About = () => {
 						most of the big topics that Software Engineers learn in
 						school.
 					</p>
-				</section>
+				</motion.section>
 
-				<section className="my-5">
+				<motion.section
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+				>
 					<h3 className="text-warning display-4">Python...First?</h3>
 
 					<p className="text-white my-3">
@@ -114,8 +121,12 @@ const About = () => {
 						for it! Now came the biggest question after completing a
 						large achievement: What now?
 					</p>
-				</section>
-				<section className="my-5">
+				</motion.section>
+
+				<motion.section
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+				>
 					<h3 className="text-warning display-4">
 						Web Development 101
 					</h3>
@@ -227,8 +238,13 @@ const About = () => {
 						course and it wasn't long before I found myself speaking
 						with Springboard's administration team.
 					</p>
-				</section>
-				<section className="my-5">
+				</motion.section>
+
+				<motion.section
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					className="springboard-section"
+				>
 					<h3 className="text-warning display-4">
 						Springboard - Current
 					</h3>
@@ -309,7 +325,7 @@ const About = () => {
 					</p>
 
 					<button
-						className="btn btn-warning download-btn"
+						className="btn btn-warning download-btn mx-1"
 						onClick={handleDownload}
 					>
 						Download CV
@@ -317,7 +333,10 @@ const About = () => {
 					<Link to="/" className="btn btn-warning mx-1">
 						Home <i className="bi bi-house"></i>
 					</Link>
-				</section>
+					<a href="#top" className="btn btn-warning mx-1">
+						Top <i class="bi bi-arrow-bar-up"></i>
+					</a>
+				</motion.section>
 			</div>
 		</div>
 	);

@@ -12,11 +12,10 @@
 .skills,
 .projects,
 .books {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 }
 
-.accordion-button:not(.collapsed) {
-	color: inherit;
-	background: #001d3d;
-	color: #ffc107;
+.education-section {
+	margin-top: 5rem;
+	margin-bottom: 15rem;
 }

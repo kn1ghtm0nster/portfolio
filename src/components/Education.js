@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Education.css";
 
 import {
@@ -69,13 +70,6 @@ const Education = () => {
 		"Implemented user authentication and authorization",
 	];
 
-	const books = [
-		"Cracking the Coding Interview",
-		"Python Crash Course - 8th Edition",
-		"Eloquent JavaScript",
-		"Elements of Progamming Interviews in Python",
-	];
-
 	const [open, setOpen] = useState("");
 
 	const toggle = (id) => {
@@ -87,12 +81,9 @@ const Education = () => {
 	};
 	return (
 		<div className="my-5">
-			{/* use span for possible home link */}
-			<h1 className="text-center display-3">
-				Relevant <span className="text-warning">Education</span>
-			</h1>
+			<h1 className="text-center display-3">Education</h1>
 
-			<section className="mt-3">
+			<section className="education-section">
 				<div className="mx-3">
 					<h2 className="education-title text-warning">
 						Springboard
@@ -100,44 +91,35 @@ const Education = () => {
 					<h6 className="education-date">Dec. 2021 - Current</h6>
 				</div>
 				<div>
-					<Accordion
-						flush
-						open={open}
-						toggle={toggle}
-						className="mx-3"
-					>
-						<AccordionItem>
-							<AccordionHeader targetId="1">
-								Overview
-							</AccordionHeader>
-							<AccordionBody accordionId="1" className="overview">
-								700+ hours of hands-on course material, with 1:1
-								industry expert mentor oversight, and completion
-								of 4 in-depth portfolio projects. Mastered
-								skills in front-end web development, back-end
-								web development, databases, and data structures
-								and algorithms.
-							</AccordionBody>
-						</AccordionItem>
-						<AccordionItem>
-							<AccordionHeader targetId="2">
-								Skills Gained
-							</AccordionHeader>
-							<AccordionBody accordionId="2" className="skills">
-								<ListGroup flush>
-									{skills.map((skill) => (
-										<ListGroupItem key={skill}>
-											{skill}
-										</ListGroupItem>
-									))}
-								</ListGroup>
-							</AccordionBody>
-						</AccordionItem>
-					</Accordion>
+					<div className="mx-3 mt-3">
+						<h4>Overview</h4>
+						<hr className="text-warning" />
+						<h4 className="overview">
+							700+ hours of hands-on course material, with 1:1
+							industry expert mentor oversight, and completion of
+							4 in-depth portfolio projects. Mastered skills in
+							front-end web development, back-end web development,
+							databases, and data structures and algorithms.
+						</h4>
+					</div>
+
+					<div className="mx-3 mt-3">
+						<h4>Skills Gained : </h4>
+						<hr className="text-warning" />
+
+						<ul className="list-unstyled skills">
+							{skills.map((skill) => (
+								<div>
+									<li key={skill}>{skill}</li>
+									<hr className="text-warning" />
+								</div>
+							))}
+						</ul>
+					</div>
 				</div>
 			</section>
 
-			<section className="mt-3">
+			<section className="education-section">
 				<div className="mx-3">
 					<h2 className="education-title text-warning">
 						The Web Developer Bootcamp 2021 - Udemy
@@ -192,7 +174,7 @@ const Education = () => {
 				</div>
 			</section>
 
-			<section className="mt-3">
+			<section className="education-section">
 				<div className="mx-3">
 					<h2 className="education-title text-warning">
 						The Modern Python 3 Bootcamp - Udemy
@@ -236,42 +218,10 @@ const Education = () => {
 					</Accordion>
 				</div>
 			</section>
-
-			<section className="mt-3 mb-3">
-				<div className="mx-3">
-					<h2 className="education-title text-warning">Books</h2>
-					<h6 className="education-date">Because why Not?</h6>
-				</div>
-				<div>
-					<Accordion
-						flush
-						open={open}
-						toggle={toggle}
-						className="mx-3"
-					>
-						<AccordionItem>
-							<AccordionHeader targetId="8">
-								Books
-							</AccordionHeader>
-							<AccordionBody accordionId="8" className="books">
-								<ListGroup flush>
-									{books.map((book) => (
-										<ListGroupItem key={book}>
-											{book}
-										</ListGroupItem>
-									))}
-								</ListGroup>
-							</AccordionBody>
-						</AccordionItem>
-					</Accordion>
-				</div>
-			</section>
 		</div>
 	);
 };
 
-// TODO: Add home link button at top of page. See the comment right above the main header.
-// TODO: change the background of the accordion so it matches the backgrond.
-// TODO: add animations.
+// TODO: continue replacing the accordion with the first section that we've completed and then add the same animations as projects and about sections.
 
 export default Education;

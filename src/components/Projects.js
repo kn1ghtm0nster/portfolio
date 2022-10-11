@@ -1,4 +1,7 @@
 import "../styles/Projects.css";
+import { motion } from "framer-motion";
+import "animate.css";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
 	const pokeForum = [
@@ -85,9 +88,8 @@ const Projects = () => {
 			</h1>
 
 			{/* Jobly */}
-			<section className="mt-3">
+			<section className="jobly animate__animated animate__fadeIn">
 				<div className="mx-3">
-					<hr className="text-warning" />
 					<h2 className="text-white display-6">Jobly</h2>
 					<hr className="text-warning" />
 				</div>
@@ -134,7 +136,11 @@ const Projects = () => {
 			</section>
 
 			{/* Poke-forum */}
-			<section className="mt-3">
+			<motion.section
+				className="mt-3"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+			>
 				<div className="mx-3">
 					<h2 className="text-white display-6">Poke-Forum</h2>
 					<hr className="text-warning" />
@@ -167,10 +173,14 @@ const Projects = () => {
 					</a>
 					<hr className="text-warning" />
 				</div>
-			</section>
+			</motion.section>
 
 			{/* Jobly-API */}
-			<section className="mt-3">
+			<motion.section
+				className="mt-3"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+			>
 				<div className="mx-3">
 					<h2 className="text-white display-6">Jobly-API</h2>
 					<hr className="text-warning" />
@@ -195,10 +205,14 @@ const Projects = () => {
 					</a>
 					<hr className="text-warning" />
 				</div>
-			</section>
+			</motion.section>
 
 			{/* HTML-Parser */}
-			<section className="mt-3">
+			<motion.section
+				className="mt-3"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+			>
 				<div className="mx-3">
 					<h2 className="text-white display-6">HTML-Parser</h2>
 					<hr className="text-warning" />
@@ -223,10 +237,14 @@ const Projects = () => {
 					</a>
 					<hr className="text-warning" />
 				</div>
-			</section>
+			</motion.section>
 
 			{/* Currency-Converter */}
-			<section className="mt-3">
+			<motion.section
+				className="mt-3"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+			>
 				<div className="mx-3">
 					<h2 className="text-white display-6">Currency Converter</h2>
 					<hr className="text-warning" />
@@ -251,10 +269,14 @@ const Projects = () => {
 					</a>
 					<hr className="text-warning" />
 				</div>
-			</section>
+			</motion.section>
 
 			{/* Giphy-Party */}
-			<section className="mt-3">
+			<motion.section
+				className="mt-3"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+			>
 				<div className="mx-3">
 					<h2 className="text-white display-6">Giphy-Party</h2>
 					<hr className="text-warning" />
@@ -286,12 +308,18 @@ const Projects = () => {
 						GitHub <i className="bi bi-github"></i>
 					</a>
 					<hr className="text-warning" />
+					<div className="mt-3 ">
+						<a href="#top" className="btn btn-warning mx-2">
+							Top <i class="bi bi-arrow-bar-up"></i>
+						</a>
+						<Link to="/" className="btn btn-warning">
+							Home <i class="bi bi-house"></i>
+						</Link>
+					</div>
 				</div>
-			</section>
+			</motion.section>
 		</div>
 	);
 };
-
-// TODO: Add css to display each project as a user scrolls down.
 
 export default Projects;
