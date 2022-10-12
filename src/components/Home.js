@@ -1,7 +1,6 @@
 import "../styles/Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
-// import headshot from "../images/portfolio_headshot.jpg";
 import HomeNavBar from "../components/HomeNavBar";
 
 const Home = () => {

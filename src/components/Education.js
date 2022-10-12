@@ -1,15 +1,7 @@
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Education.css";
-
-import {
-	Accordion,
-	AccordionBody,
-	AccordionHeader,
-	AccordionItem,
-	ListGroup,
-	ListGroupItem,
-} from "reactstrap";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Education = () => {
 	const skills = [
@@ -70,47 +62,70 @@ const Education = () => {
 		"Implemented user authentication and authorization",
 	];
 
-	const [open, setOpen] = useState("");
-
-	const toggle = (id) => {
-		if (open === id) {
-			setOpen();
-		} else {
-			setOpen(id);
-		}
-	};
 	return (
 		<div className="my-5">
 			<h1 className="text-center display-3">Education</h1>
 
 			<section className="education-section">
-				<div className="mx-3">
-					<h2 className="education-title text-warning">
-						Springboard
-					</h2>
-					<h6 className="education-date">Dec. 2021 - Current</h6>
-				</div>
+				<AnimatePresence>
+					<motion.div
+						className="mx-3"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+					>
+						<h2 className="education-title text-warning">
+							Springboard
+						</h2>
+						<h6 className="education-date">Dec. 2021 - Current</h6>
+					</motion.div>
+				</AnimatePresence>
 				<div>
-					<div className="mx-3 mt-3">
-						<h4>Overview</h4>
-						<hr className="text-warning" />
-						<h4 className="overview">
-							700+ hours of hands-on course material, with 1:1
-							industry expert mentor oversight, and completion of
-							4 in-depth portfolio projects. Mastered skills in
-							front-end web development, back-end web development,
-							databases, and data structures and algorithms.
-						</h4>
-					</div>
+					<AnimatePresence>
+						<motion.div
+							className="mx-3 mt-3"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+						>
+							<h4>Overview :</h4>
+							<hr className="text-warning" />
+							<h4 className="overview">
+								700+ hours of hands-on course material, with 1:1
+								industry expert mentor oversight, and completion
+								of 4 in-depth portfolio projects. Mastered
+								skills in front-end web development, back-end
+								web development, databases, and data structures
+								and algorithms.
+							</h4>
+						</motion.div>
+					</AnimatePresence>
 
 					<div className="mx-3 mt-3">
-						<h4>Skills Gained : </h4>
-						<hr className="text-warning" />
+						<AnimatePresence>
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+							>
+								<h4>Skills Gained : </h4>
+								<hr className="text-warning" />
+							</motion.div>
+						</AnimatePresence>
 
 						<ul className="list-unstyled skills">
 							{skills.map((skill) => (
 								<div>
-									<li key={skill}>{skill}</li>
+									<AnimatePresence>
+										<motion.li
+											key={skill}
+											initial={{ opacity: 0 }}
+											whileInView={{ opacity: 1 }}
+											exit={{ opacity: 0 }}
+										>
+											{skill}
+										</motion.li>
+									</AnimatePresence>
 									<hr className="text-warning" />
 								</div>
 							))}
@@ -120,27 +135,32 @@ const Education = () => {
 			</section>
 
 			<section className="education-section">
-				<div className="mx-3">
-					<h2 className="education-title text-warning">
-						The Web Developer Bootcamp 2021 - Udemy
-					</h2>
-					<h6 className="education-date">
-						Jan. 2021 - November 2021
-					</h6>
-				</div>
-
-				<div>
-					<Accordion
-						flush
-						open={open}
-						toggle={toggle}
+				<AnimatePresence>
+					<motion.div
 						className="mx-3"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
 					>
-						<AccordionItem>
-							<AccordionHeader targetId="6">
-								Overview
-							</AccordionHeader>
-							<AccordionBody accordionId="6" className="overview">
+						<h2 className="education-title text-warning">
+							The Web Developer Bootcamp 2021 - Udemy
+						</h2>
+						<h6 className="education-date">
+							Jan. 2021 - November 2021
+						</h6>
+					</motion.div>
+				</AnimatePresence>
+				<div>
+					<AnimatePresence>
+						<motion.div
+							className="mx-3 mt-3"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+						>
+							<h4>Overview :</h4>
+							<hr className="text-warning" />
+							<h4 className="overview">
 								65 hours in depth Web Development learning
 								starting with the basic HTML syntax and ending
 								with a full-stack application that contains user
@@ -154,74 +174,120 @@ const Education = () => {
 								such as Node.js, Express.js, and MongoDB as well
 								as learning how to use each technology
 								individually.
-							</AccordionBody>
-						</AccordionItem>
-						<AccordionItem>
-							<AccordionHeader targetId="7">
-								Skills Gained
-							</AccordionHeader>
-							<AccordionBody accordionId="7" className="skills">
-								<ListGroup flush>
-									{webDevSkills.map((skill) => (
-										<ListGroupItem key={skill}>
+							</h4>
+						</motion.div>
+					</AnimatePresence>
+
+					<div className="mx-3 mt-3">
+						<AnimatePresence>
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+							>
+								<h4>Skills Gained : </h4>
+								<hr className="text-warning" />
+							</motion.div>
+						</AnimatePresence>
+
+						<ul className="list-unstyled skills">
+							{webDevSkills.map((skill) => (
+								<div>
+									<AnimatePresence>
+										<motion.li
+											key={skill}
+											initial={{ opacity: 0 }}
+											whileInView={{ opacity: 1 }}
+											exit={{ opacity: 0 }}
+										>
 											{skill}
-										</ListGroupItem>
-									))}
-								</ListGroup>
-							</AccordionBody>
-						</AccordionItem>
-					</Accordion>
+										</motion.li>
+										<hr className="text-warning" />
+									</AnimatePresence>
+								</div>
+							))}
+						</ul>
+					</div>
 				</div>
 			</section>
 
 			<section className="education-section">
-				<div className="mx-3">
-					<h2 className="education-title text-warning">
-						The Modern Python 3 Bootcamp - Udemy
-					</h2>
-					<h6 className="education-date">Aug. 2020 - Mar-2021</h6>
-				</div>
-
-				<div>
-					<Accordion
-						flush
-						open={open}
-						toggle={toggle}
+				<AnimatePresence>
+					<motion.div
 						className="mx-3"
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
 					>
-						<AccordionItem>
-							<AccordionHeader targetId="4">
-								Overview
-							</AccordionHeader>
-							<AccordionBody accordionId="4" className="overview">
+						<h2 className="education-title text-warning">
+							The Modern Python 3 Bootcamp - Udemy
+						</h2>
+						<h6 className="education-date">Aug. 2020 - Mar-2021</h6>
+					</motion.div>
+				</AnimatePresence>
+				<div>
+					<AnimatePresence>
+						<motion.div
+							className="mx-3 mt-3"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+						>
+							<h4>Overview :</h4>
+							<hr className="text-warning" />
+							<h4 className="overview">
 								30 hours of Python learning with nearly 200
 								exercises and quizzes. Increase knowledge of
 								Python3 syntax along with deep understanding of
 								Data Structures and Algorithms in the Python
 								syntax.
-							</AccordionBody>
-						</AccordionItem>
-						<AccordionItem>
-							<AccordionHeader targetId="5">
-								Skills Gained
-							</AccordionHeader>
-							<AccordionBody accordionId="5" className="skills">
-								<ListGroup flush>
-									{pythonSkills.map((skill) => (
-										<ListGroupItem key={skill}>
+							</h4>
+						</motion.div>
+					</AnimatePresence>
+
+					<div className="mx-3 mt-3">
+						<AnimatePresence>
+							<motion.div
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+							>
+								<h4>Skills Gained : </h4>
+								<hr className="text-warning" />
+							</motion.div>
+						</AnimatePresence>
+
+						<ul className="list-unstyled skills">
+							{pythonSkills.map((skill) => (
+								<AnimatePresence>
+									<div>
+										<motion.li
+											key={skill}
+											initial={{ opacity: 0 }}
+											whileInView={{ opacity: 1 }}
+											exit={{ opacity: 0 }}
+										>
 											{skill}
-										</ListGroupItem>
-									))}
-								</ListGroup>
-							</AccordionBody>
-						</AccordionItem>
-					</Accordion>
+										</motion.li>
+										<hr className="text-warning" />
+									</div>
+								</AnimatePresence>
+							))}
+						</ul>
+					</div>
+
+					<div className="mx-3">
+						<Link to="/" className="btn btn-warning">
+							Home <i class="bi bi-house"></i>
+						</Link>
+						<a href="#top" className="mx-1 btn btn-warning">
+							Top <i class="bi bi-arrow-bar-up"></i>
+						</a>
+					</div>
 				</div>
 			</section>
 		</div>
 	);
 };
-
-// TODO: continue replacing the accordion with the first section that we've completed and then add the same animations as projects and about sections.
 
 export default Education;

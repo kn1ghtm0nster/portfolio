@@ -309,12 +309,12 @@ const Projects = () => {
 					</a>
 					<hr className="text-warning" />
 					<div className="mt-3 ">
-						<a href="#top" className="btn btn-warning mx-2">
-							Top <i class="bi bi-arrow-bar-up"></i>
-						</a>
 						<Link to="/" className="btn btn-warning">
 							Home <i class="bi bi-house"></i>
 						</Link>
+						<a href="#top" className="btn btn-warning mx-2">
+							Top <i class="bi bi-arrow-bar-up"></i>
+						</a>
 					</div>
 				</div>
 			</motion.section>

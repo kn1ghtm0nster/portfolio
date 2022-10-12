@@ -14,7 +14,7 @@ const About = () => {
 				let anchorLink = document.createElement("a");
 
 				anchorLink.href = url;
-				anchorLink.download = "Update-Beta_5.pdf";
+				anchorLink.download = "Diego-Resume.pdf";
 				anchorLink.click();
 			});
 		});
