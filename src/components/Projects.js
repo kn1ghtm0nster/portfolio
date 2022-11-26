@@ -4,6 +4,8 @@ import "animate.css";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
+	document.title = "Projects";
+
 	const pokeForum = [
 		"Full-Stack Applciation built using Python and Flask to build the backend and communicate with relational database using PostgreSQL",
 		"Set up relational database with PostgreSQL in order to setup custom Python classes and make backend queries from user input on the frontend of application",

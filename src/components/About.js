@@ -5,20 +5,7 @@ import "../styles/About.css";
 import { motion } from "framer-motion";
 
 const About = () => {
-	// https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/
-	const handleDownload = () => {
-		fetch("Update-Beta_5.pdf").then((response) => {
-			response.blob().then((blob) => {
-				const url = window.URL.createObjectURL(blob);
-
-				let anchorLink = document.createElement("a");
-
-				anchorLink.href = url;
-				anchorLink.download = "Diego-Resume.pdf";
-				anchorLink.click();
-			});
-		});
-	};
+	document.title = "About";
 
 	return (
 		<div>
@@ -323,18 +310,19 @@ const About = () => {
 						recruiter or something along those lines. Ok that's all
 						I got, Thanks for reading friends :)
 					</p>
-
-					<button
+					<a
 						className="btn btn-warning download-btn mx-1"
-						onClick={handleDownload}
+						href="https://docs.google.com/document/d/1GJcZRQ4WOeVLad8qOqrL01W34E7RjfsMKzNekyMLfew/edit?usp=sharing"
+						rel="noreferrer"
+						target="_blank"
 					>
 						Download CV
-					</button>
+					</a>
 					<Link to="/" className="btn btn-warning mx-1">
 						Home <i className="bi bi-house"></i>
 					</Link>
-					<a href="#top" className="btn btn-warning mx-1">
-						Top <i class="bi bi-arrow-bar-up"></i>
+					<a href="#top" className="btn btn-warning mx-1 ">
+						Top <i className="bi bi-arrow-bar-up"></i>
 					</a>
 				</motion.section>
 			</div>

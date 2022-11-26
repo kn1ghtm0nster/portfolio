@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Education = () => {
+	document.title = "Education";
 	const skills = [
 		"DataStructures & Algorithms",
 		"Frontend-Development",
@@ -115,8 +116,8 @@ const Education = () => {
 
 						<ul className="list-unstyled skills">
 							{skills.map((skill) => (
-								<div>
-									<AnimatePresence>
+								<div key={skill}>
+									<AnimatePresence key={skill}>
 										<motion.li
 											key={skill}
 											initial={{ opacity: 0 }}
@@ -192,8 +193,8 @@ const Education = () => {
 
 						<ul className="list-unstyled skills">
 							{webDevSkills.map((skill) => (
-								<div>
-									<AnimatePresence>
+								<div key={skill}>
+									<AnimatePresence key={skill}>
 										<motion.li
 											key={skill}
 											initial={{ opacity: 0 }}
@@ -259,8 +260,8 @@ const Education = () => {
 
 						<ul className="list-unstyled skills">
 							{pythonSkills.map((skill) => (
-								<AnimatePresence>
-									<div>
+								<AnimatePresence key={skill}>
+									<div key={skill}>
 										<motion.li
 											key={skill}
 											initial={{ opacity: 0 }}
@@ -278,10 +279,10 @@ const Education = () => {
 
 					<div className="mx-3">
 						<Link to="/" className="btn btn-warning">
-							Home <i class="bi bi-house"></i>
+							Home <i className="bi bi-house"></i>
 						</Link>
 						<a href="#top" className="mx-1 btn btn-warning">
-							Top <i class="bi bi-arrow-bar-up"></i>
+							Top <i className="bi bi-arrow-bar-up"></i>
 						</a>
 					</div>
 				</div>

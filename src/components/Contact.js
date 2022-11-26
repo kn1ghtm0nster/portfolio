@@ -15,6 +15,8 @@ import {
 import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
+	document.title = "Contact";
+
 	const [state, handleSubmit] = useForm("xzbwpejg");
 
 	if (state.succeeded) {
