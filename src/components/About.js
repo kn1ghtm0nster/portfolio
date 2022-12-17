@@ -40,9 +40,8 @@ const About = () => {
 					<p className="text-white my-3 animate__animated animate__fadeIn animate__fast animate__delay-5s">
 						As you've probably already seen, my name is{" "}
 						<span className="text-warning">Diego</span> and I am a
-						Software Engineer currently enrolled in Springboard's
-						Software Engineering Bootcamp. So, how is it that I
-						ended up here? Well, for that we go back to 2019 when my
+						Full-Stack Software Engineer. So, how is it that I ended
+						up here? Well, for that we go back to 2019 when my
 						roommate noticed that I had a knack for being very
 						analytical about how the software of our company worked
 						and was more curious to explore those questions with our
@@ -232,9 +231,7 @@ const About = () => {
 					whileInView={{ opacity: 1 }}
 					className="springboard-section"
 				>
-					<h3 className="text-warning display-4">
-						Springboard - Current
-					</h3>
+					<h3 className="text-warning display-4">Springboard</h3>
 
 					<p className="text-white my-3">
 						I began my journey with Springboard in November of 2021
@@ -291,10 +288,11 @@ const About = () => {
 						stretch because this was a lot of reading. I am glad you
 						stuck around and hopefully enjoyed all the things I've
 						learned in my long three going on four year learning
-						experience. This is the part where I am now looking for
-						my first position as a Software Engineer but if you're
-						curious about what I do away from the keyboard when I go
-						outside and see the sun, then you can head over to the{" "}
+						experience. After spending the last three months of 2022
+						studying, I landed a position as an Associate Engineer
+						for Wells Fargo! now, if you're curious about what I do
+						away from the keyboard when I go outside and see the
+						sun, then you can head over to the{" "}
 						<Link
 							to="/contact"
 							className="text-warning text-decoration-none"
@@ -306,7 +304,7 @@ const About = () => {
 						the same song so I am ready to end this long note) and
 						will include the social medial links where you can reach
 						out or just follow to see what else I am up to. You can
-						download my resume from the button below if you are a
+						view my resume from the button below if you are a
 						recruiter or something along those lines. Ok that's all
 						I got, Thanks for reading friends :)
 					</p>
@@ -316,7 +314,7 @@ const About = () => {
 						rel="noreferrer"
 						target="_blank"
 					>
-						Download CV
+						View CV
 					</a>
 					<Link to="/" className="btn btn-warning mx-1">
 						Home <i className="bi bi-house"></i>
